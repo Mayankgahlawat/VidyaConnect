@@ -1,0 +1,57 @@
+/* Import a beautiful, modern font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* --- Global Styles & Background --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Create a subtle, soft gradient background */
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    color: #333;
+}
+
+/* --- Glassmorphism Navbar --- */
+.navbar {
+    /* Create a semi-transparent, blurred background effect */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+/* --- Animated Card Styles --- */
+.card {
+    /* Add a subtle shadow for a "floating" effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 15px; /* Softer, rounded corners */
+    overflow: hidden; /* Ensures image corners are also rounded */
+    
+    /* Add a smooth transition for the hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    /* Make the card lift up and increase its shadow on hover */
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-weight: 600;
+    color: #0056b3; /* A strong, professional blue */
+}
+
+.card-body {
+    background-color: #ffffff;
+}
+
+/* --- General UI Improvements --- */
+h1 {
+    font-weight: 600;
+    color: #212529;
+}
