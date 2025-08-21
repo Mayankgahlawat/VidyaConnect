@@ -23,8 +23,14 @@ jobs:
       run: |
         pip install -r requirements.txt
 
+    # --- ADD THIS NEW STEP ---
+    - name: Apply database migrations
+      env:
+        # It also needs the database URL to connect
+        DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      run: flask db upgrade
+
     - name: Run scraper
       env:
-        # Use the secret we just created
         DATABASE_URL: ${{ secrets.DATABASE_URL }}
       run: python3 scraper.py
